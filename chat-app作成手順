@@ -12,7 +12,8 @@ validates :name, presence: true
 
 
 
-
+User.create(name: "hoge", email: "example@fuga.com", password: "123456", password_confirmation:"123456")
+User.create(name: "hoge", email: "example@fuga.com", password: "123456", password_confirmation: "123456")
 
 
 
