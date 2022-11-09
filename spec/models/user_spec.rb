@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  before do
-    @user = FactoryBot.build(:user)
-  end
+ before do
+   @user = FactoryBot.build(:user)
+ end
 
   describe 'ユーザー新規登録' do
     context '新規登録できる場合' do
@@ -51,7 +51,7 @@ RSpec.describe User, type: :model do
         another_user.valid?
         expect(another_user.errors.full_messages).to include('Email has already been taken')
       end
-     it 'emailは@を含まないと登録できない' do
+      it 'emailは@を含まないと登録できない' do
         @user.email = 'testmail'
         @user.valid?
         expect(@user.errors.full_messages).to include('Email is invalid')
